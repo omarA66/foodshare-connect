@@ -1,0 +1,14 @@
+version: '3'
+services:
+  auth:
+    build: ./backend/auth
+    ports: ["3001:3000"]
+  users:
+    build: ./backend/users
+    ports: ["3002:3000"]
+  donations:
+    build: ./backend/donations
+    ports: ["3003:3000"]
+  frontend:
+    build: ./frontend
+    ports: ["4200:4200"]
